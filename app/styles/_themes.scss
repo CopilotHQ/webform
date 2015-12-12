@@ -1,0 +1,109 @@
+// Themes
+  .neutralTheme {
+    @extend .pull-right;
+    span:nth-child(1) {
+      background: #eeeeee;
+    }
+    span:nth-child(2) {
+      background: #ffffff;
+      border: 1px solid #DDDDDD;
+    }
+    span:nth-child(3) {
+      background: #aaaaaa;
+    }
+  }
+
+  .simpleTheme {
+    @extend .pull-right;
+    span:nth-child(1) {
+      background: #ffffff;
+      border: 1px solid #DDDDDD;
+    }
+    span:nth-child(2) {
+      background: #f1f1f1;
+    }
+    span:nth-child(3) {
+      background: #33AAFF;
+    }
+  }
+
+  .geocitiesTheme {
+    @extend .pull-right;
+    span:nth-child(1) {
+      background: url("http://code.divshot.com/geo-bootstrap/img/microfab.gif");
+      background-size: cover;
+    }
+    span:nth-child(2) {
+      background: url("http://code.divshot.com/geo-bootstrap/img/flames.gif") center center;
+      background-size: cover;
+    }
+    span:nth-child(3) {
+      background: url("http://code.divshot.com/geo-bootstrap/img/rainbow.gif");
+      background-size: cover;
+    }
+  }
+
+  .theBluesTheme {
+    @extend .pull-right;
+    span:nth-child(1) {
+      background: #3c8dc5;
+    }
+    span:nth-child(2) {
+      background: #e9f2f9;
+    }
+    span:nth-child(3) {
+      background: #b2d1e5;
+    }
+  }
+
+  .etsyTheme {
+    @extend .pull-right;
+    span:nth-child(1) {
+      background: #f4f5ed;
+    }
+    span:nth-child(2) {
+      background: #c7c9be;
+    }
+    span:nth-child(3) {
+      background: #dc4e00;
+    }
+  }
+
+  .mintyTheme {
+    @extend .pull-right;
+    span:nth-child(1) {
+      background: #c0dfd9;
+    }
+    span:nth-child(2) {
+      background: #e9ece5;
+    }
+    span:nth-child(3) {
+      background: #3b3a36;
+    }
+  }
+
+  .jungleTheme {
+    @extend .pull-right;
+    span:nth-child(1) {
+      background: #283018;
+    }
+    span:nth-child(2) {
+      background: #f0eceb;
+    }
+    span:nth-child(3) {
+      background: #aa863a;
+    }
+  }
+
+  .navyTheme {
+    @extend .pull-right;
+    span:nth-child(1) {
+      background: #22264b;
+    }
+    span:nth-child(2) {
+      background: #e8edf3;
+    }
+    span:nth-child(3) {
+      background: #e6cf8b;
+    }
+  }

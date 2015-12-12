@@ -1,0 +1,470 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>webform</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.css" />
+    <link rel="stylesheet" href="/bower_components/bootstrap-select/dist/css/bootstrap-select.css" />
+    <link rel="stylesheet" href="/bower_components/bootstrap-toggle/css/bootstrap-toggle.min.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <nav class="copilot">
+      <div class="contain-nav">
+        <img class="copilot-logo" src="images/copilot-logo.png">
+        <span><a href="www.aweber.com" style="text-decoration:none; color:#505E67 ; font-weight:400;">Powered by AWeber</a></span>
+      </div>
+    </nav>
+
+<div class="container-fluid" style="height: 100%;">
+  <div class="row" style="height: 100%;">
+
+    <div class="col-md-9 preview">
+
+        <div id="aweberFormToSnippet">
+          <style>
+            .aweberHForm {
+              font-family: 'helvetica', arial, sans-serif;
+              font-size: 12px;
+              color: #333333;
+
+              background: #EEEEEE;
+
+              margin-top: 20px;
+              padding: 15px;
+
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box;
+            }
+
+            .aweberHForm * {
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box;
+
+              box-shadow: none;
+              margin: 0;
+            	padding: 0;
+            	border: 0;
+            	outline: 0;
+            	font-weight: inherit;
+            	font-style: inherit;
+            	font-size: 100%;
+            	font-family: inherit;
+            	vertical-align: baseline;
+            }
+
+            .aweberHForm h2 {
+              margin: 0 0 12px;
+              padding: 0;
+
+              font-size: 24px;
+            }
+
+            .aweberHForm p {
+              margin: 15px 0 0;
+            }
+
+            [class*='aweberHFormCol-'] {
+              float: left;
+              min-height: 1px;
+              padding-right: 10px;
+            }
+
+            [class*='aweberHFormCol-']:last-child {
+              padding-right: 0;
+            }
+
+            .aweberHForm input {
+              font-size: 14px;
+
+              margin: 0;
+              border: 0;
+
+              box-shadow: none;
+              -webkit-box-shadow: none;
+              -moz-box-shadow: none;
+            }
+
+            .aweberHForm input[type="submit"] {
+              background-position: center !important;
+              width: 100%;
+              padding: 10px;
+
+              background: #AAAAAA;
+              color: #FFFFFF;
+
+              border-radius: 3px;
+              -webkit-border-radius: 3px;
+              -moz-border-radius: 3px;
+            }
+
+            .aweberHForm input[type="email"], .aweberHForm input[type="text"] {
+              background-position: center !important;
+              border: none;
+              padding: 10px;
+            }
+
+            .aweberHFormGrid {
+              width: 100%;
+              margin: 0 auto;
+            }
+
+            .aweberHFormGrid:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+            .aweberHFormCol-1-1 {
+              width: 100%;
+            }
+            .aweberHFormCol-1-2 {
+              width: 50%;
+            }
+            .aweberHFormCol-1-3 {
+              width: 33%;
+            }
+            .aweberHFormCol-2-5 {
+              width: 40%;
+            }
+            .aweberHFormCol-1-5 {
+              width: 20%;
+            }
+            .af-textWrap input {
+              width: 100% !important;
+            }
+
+            #aweberHFormFooter {
+              text-align: center;
+              margin-top: 10px;
+              font-size: 12px;
+            }
+
+            .aweberHForm-pulse {
+              animation: pulse 1s ease infinite;
+              -webkit-animation: pulse 1s ease infinite;
+              -moz-animation: pulse 1s ease infinite;
+            }
+
+            @-webkit-keyframes pulse {
+              0% { transform: scale(1,1); }
+              50% { transform: scale(1.02,1.02); }
+              100% { transform: scale(1,1); }
+            }
+            @-moz-keyframes pulse {
+              0% { transform: scale(1,1); }
+              50% { transform: scale(1.02,1.02); }
+              100% { transform: scale(1,1); }
+            }
+            @keyframes pulse {
+              0% { transform: scale(1,1); }
+              50% { transform: scale(1.02,1.02); }
+              100% { transform: scale(1,1); }
+            }
+
+            @media (max-width: 600px) {
+              [class*='aweberHFormCol-'] {
+                padding: 0;
+                width: 100%;
+              }
+              .aweberHForm input[type="text"], .aweberHForm input[type="email"] {
+                margin-bottom: 10px;
+              }
+            }
+          </style>
+          <form method="post" class="af-form-wrapper" accept-charset="UTF-8" action="https://www.aweber.com/scripts/addlead.pl"  >
+            <div style="display: none;">
+              <input type="hidden" name="meta_web_form_id" value="" />
+              <input type="hidden" name="meta_split_id" value="" />
+              <input id="aweberListId" type="hidden" name="listname" value="" />
+              <input id="aweberRedirect" type="hidden" name="redirect" value="https://www.aweber.com/thankyou.htm?m=default" id="redirect_20ad9205a668ef2753dfbc3e2fd3cf8a" />
+              <input id="aweberAdTracking" type="hidden" name="meta_adtracking" value="My_Web_Form" />
+              <input type="hidden" name="meta_message" value="1" />
+              <input type="hidden" name="meta_required" value="name,email" />
+              <input type="hidden" name="meta_tooltip" value="" />
+            </div>
+            <div class="af-form aweberHForm">
+              <div class="aweberHFormGrid" id="aweberHeadlineTextValue">
+                <div class="aweberHFormCol-1-1">
+                  <h2 align="center" style="display: none;"></h2>
+                </div>
+              </div>
+
+              <div class="aweberHFormGrid">
+                <div class="aweberHFormCol-2-5">
+                  <div class="af-textWrap">
+                    <input id="awf_field-78323082" type="text" placeholder="Name" name="name" class="text" value=""  onfocus=" if (this.value == '') { this.value = ''; }" onblur="if (this.value == '') { this.value='';} " tabindex="500" />
+                  </div>
+                  <div class="af-clear"></div>
+                </div>
+                <div class="aweberHFormCol-2-5">
+                  <div class="af-textWrap">
+                    <input class="text" id="awf_field-78323083" type="email" placeholder="Email Address" name="email" value="" tabindex="501" onfocus=" if (this.value == '') { this.value = ''; }" onblur="if (this.value == '') { this.value='';} " />
+                  </div>
+                  <div class="af-clear"></div>
+                </div>
+                <div class="aweberHFormCol-1-5">
+                  <input  name="submit" class="submit" type="submit" value="Submit" id="submitButton" tabindex="502" />
+                  <div class="af-clear"></div>
+                </div>
+              </div>
+
+              <div class="aweberHFormGrid">
+                <div class="aweberHForm-1-1" id="aweberHFormFooter">
+                  <p>We respect your <a title="Privacy Policy" class="aweberFooterLink" href="https://www.aweber.com/permission.htm" target="_blank" rel="nofollow">email privacy</a> | <a href="https://www.aweber.com" title="AWeber Email Marketing" target="_blank" class="aweberFooterLink" rel="nofollow">Powered by AWeber Email Marketing</a></p>
+                  <div class="af-clear"></div>
+                </div>
+              </div>
+
+            </div>
+            <div style="display: none;">
+              <img src="https://forms.aweber.com/form/displays.htm?id=jMxMzCxsbEzMzA==" alt="" />
+            </div>
+          </form>
+        </div>
+
+    </div>
+
+    <div class="col-md-3 customize">
+
+      <!-- Nav tabs -->
+      <ul class="nav nav-pills" role="tablist">
+        <li role="presentation" class="active"><a href="#content" aria-controls="content" role="tab" data-toggle="tab"><img src="images/content.png" alt="content" /></a></li>
+        <li role="presentation"><a href="#style" aria-controls="style" role="tab" data-toggle="tab"><img src="images/design.png" alt="design" /></a></li>
+        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><img src="images/settings.png" alt="settings" /></a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div role="tabpanel" class="row tab-pane fade in active" id="content">
+          <h3 id="contentHead">Content</h3>
+          <p>Customize your copy</p>
+          <form>
+            <div class="form-group">
+              <label>Headline Text</label>
+              <input class="form-control" id="aweberHeadlineTextValueInput" placeholder="Headline Text (optional)" value="" type="url" />
+            </div>
+            <div class="form-group">
+              <label>Button Title Text</label>
+              <input class="form-control" id="aweberButtonTextValueInput" placeholder="Button Title" value="Submit" type="url" />
+            </div>
+            <div class="form-group">
+              <label for="theme">Animated Button:</label>
+              <input type="checkbox" id="aweberAnimatedButtonToggle" data-toggle="toggle">
+            </div>
+            <div class="form-group">
+              <label for="theme">Footer:</label>
+              <input type="checkbox" checked id="aweberFooterToggle" data-toggle="toggle">
+            </div>
+            <div class="form-group">
+              <label>AWeber List ID</label>
+              <input class="form-control" id="aweberListIdInput" placeholder="List ID" />
+            </div>
+          </form>
+
+          <div class="well" style="margin-top: 20px;">
+            <p>If you'd like to receive release notes and updates on the development process, please add this awlist to the form, build it, and then submit your email address.</p>
+            List ID: awlist4099564
+          </div>
+        </div>
+
+        <div role="tabpanel" class="row tab-pane fade" id="style">
+          <h3>Design</h3>
+          <p>Add a splash of color</p>
+          <form>
+            <div class="form-group">
+              <label for="theme">Theme:</label>
+              <select class="form-control" id="themePicker" name="theme">
+                <option data-content="Neutral <span class='neutralTheme'><span class='aweberSwatch'></span><span class='aweberSwatch'></span><span class='aweberSwatch'></span></span>">Neutral</option>
+                <option data-content="Simple <span class='simpleTheme'><span class='aweberSwatch'></span><span class='aweberSwatch'></span><span class='aweberSwatch'></span></span>">Simple</option>
+                <option data-content="Etsy <span class='etsyTheme'><span class='aweberSwatch'></span><span class='aweberSwatch'></span><span class='aweberSwatch'></span></span>">Etsy</option>
+                <option data-content="The Blues <span class='theBluesTheme'><span class='aweberSwatch'></span><span class='aweberSwatch'></span><span class='aweberSwatch'></span></span>">The Blues</option>
+                <option data-content="Navy <span class='navyTheme'><span class='aweberSwatch'></span><span class='aweberSwatch'></span><span class='aweberSwatch'></span></span>">Navy</option>
+                <option data-content="Minty <span class='mintyTheme'><span class='aweberSwatch'></span><span class='aweberSwatch'></span><span class='aweberSwatch'></span></span>">Minty</option>
+                <option data-content="Jungle <span class='jungleTheme'><span class='aweberSwatch'></span><span class='aweberSwatch'></span><span class='aweberSwatch'></span></span>">Jungle</option>
+                <option data-content="Geocities <span class='geocitiesTheme'><span class='aweberSwatch'></span><span class='aweberSwatch'></span><span class='aweberSwatch'></span></span>">Geocities</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="theme">Customize:</label>
+              <input type="checkbox" id="advancedStyleOptionsToggle" data-toggle="toggle">
+            </div>
+          </form>
+
+          <form id="advancedStyleOptions" style="display: none;">
+            <div class="form-group">
+              <label>Form Background Color</label>
+              <div class="input-group" id="aweberBackgroundColorPicker">
+                <input id="aweberBackgroundColorInput" type="text" value="#EEEEEE" class="form-control" />
+                <span class="input-group-addon"><i></i></span>
+              </div>
+            </div>
+            <div class="form-group hide">
+              <label>Form Background Image</label>
+              <input id="aweberBackgroundImageInput" type="text" value="" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label>Form Text Color</label>
+              <div class="input-group" id="aweberTextColorPicker">
+                <input id="aweberTextColorInput" type="text" value="#333333" class="form-control" />
+                <span class="input-group-addon"><i></i></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Field Background Color</label>
+              <div class="input-group" id="aweberInputBackgroundColorPicker">
+                <input id="aweberInputBackgroundColorInput" type="text" value="#FFFFFF" class="form-control" />
+                <span class="input-group-addon"><i></i></span>
+              </div>
+            </div>
+            <div class="form-group hide">
+              <label>Field Background Image</label>
+              <input id="aweberInputBackgroundImageInput" type="text" value="" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label>Button Background Color</label>
+              <div class="input-group" id="aweberButtonBackgroundColorPicker">
+                <input id="aweberButtonBackgroundColorInput" type="text" value="#AAAAAA" class="form-control" />
+                <span class="input-group-addon"><i></i></span>
+              </div>
+            </div>
+            <div class="form-group hide">
+              <label>Button Background Image</label>
+              <input id="aweberButtonBackgroundImageInput" type="text" value="" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label>Button Text Color</label>
+              <div class="input-group" id="aweberButtonTextColorPicker">
+                <input id="aweberButtonTextColorInput" type="text" value="#FFFFFF" class="form-control" />
+                <span class="input-group-addon"><i></i></span>
+              </div>
+            </div>
+            Feeling good about your theme? <a id="aweberShareForm">Share it!</a>
+          </form>
+        </div>
+
+        <div role="tabpanel" class="row tab-pane fade" id="settings">
+          <h3>Settings</h3>
+          <p>Set your advance options</p>
+          <form>
+            <div class="form-group">
+              <label>Redirect URL</label>
+              <input class="form-control" id="aweberRedirectInput" placeholder="Redirect" type="url" />
+            </div>
+            <div class="form-group">
+              <label>Ad Tracking</label>
+              <input class="form-control" id="aweberAdTrackingInput" placeholder="Ad Tracking" type="url" />
+              <small>Add tags for easy subscriber tracking</small>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <form class="text-center">
+        <a class="btn btn-default" id="aweberBuildForm">Build</a>
+      </form>
+
+    </div>
+
+  </div>
+</div>
+
+
+    <div class="modal fade" id="codeSnippet">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Hey! You just made a beautiful form. Grab it below:</h4>
+          </div>
+          <div class="modal-body">
+            <div class="snippet"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="modal fade" id="shareURL">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Hey! You just made a beautiful form. Grab it below:</h4>
+          </div>
+          <div class="modal-body">
+            <div class="shareURL"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.js"></script>
+    <script src="/bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+    <script src="/bower_components/ScrollToFixed/jquery-scrolltofixed.js"></script>
+    <script src="/bower_components/bootstrap-toggle/js/bootstrap-toggle.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js(.) scripts/plugins.js -->
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+    <!-- endbuild -->
+
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+  </body>
+</html>

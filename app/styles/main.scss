@@ -1,0 +1,109 @@
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import "copilot";
+@import "themes";
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.snippet, .shareURL {
+  padding: 20px;
+  margin: 20px 0;
+  height: 200px;
+  overflow: scroll;
+  background: #FAFAFA;
+  border: 1px solid #DDDDDD;
+  word-wrap: break-word;
+}
+
+.has-error {
+  color: red;
+  border-color: red;
+  input {
+    background: #FFEEEE;
+  }
+}
+
+.tab-content {
+  padding: 12px 24px;
+}
+
+.customize {
+  position: relative;
+  background: #FAFAFA;
+  height: 100%;
+  overflow: scroll;
+  padding-bottom: 36px;
+  border-left: 1px solid #DDDDDD;
+  h3 {
+    color: #0079C1;
+    margin-bottom: 24px;
+  }
+  @media (max-width: $screen-md-min) {
+    margin-top: 20px;
+    border-left: 0;
+    border-top: 1px solid #DDDDDD;
+    height: auto;
+  }
+}
+
+.preview {
+  position: relative;
+  height: 100%;
+  @media (max-width: $screen-md-min) {
+    height: auto;
+  }
+}
+
+ul.nav-pills {
+  text-align: center;
+  padding-top: 20px;
+  li {
+    float: none;
+    display: inline-block;
+    margin-right: 12px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  a {
+    border-radius:40px;
+    background: #CCCCCC;
+    padding: 12px;
+    &:hover {
+      background: #AAAAAA;
+    }
+  }
+  img {
+    width: 30px;
+  }
+}
+
+#aweberFormToSnippet {
+  position: relative;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0px auto;
+  @media (max-width: $screen-md-min) {
+    top: 0;
+    transform: translateY(0);
+  }
+}
+
+// Swatches
+  .aweberSwatch {
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
