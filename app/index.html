@@ -33,7 +33,7 @@
     <nav class="copilot">
       <div class="contain-nav">
         <img class="copilot-logo" src="images/copilot-logo.png">
-        <span><a href="www.aweber.com" style="text-decoration:none; color:#505E67 ; font-weight:400;">Powered by AWeber</a></span>
+        <span><a href="https://www.aweber.com" style="text-decoration:none; color:#505E67 ; font-weight:400;">Powered by AWeber</a></span>
       </div>
     </nav>
 
@@ -251,15 +251,37 @@
 
       <!-- Nav tabs -->
       <ul class="nav nav-pills" role="tablist">
-        <li role="presentation" class="active"><a href="#content" aria-controls="content" role="tab" data-toggle="tab"><img src="images/content.png" alt="content" /></a></li>
+        <li role="presentation" class="active"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><img src="images/settings.png" alt="settings" /></a></li>
         <li role="presentation"><a href="#style" aria-controls="style" role="tab" data-toggle="tab"><img src="images/design.png" alt="design" /></a></li>
-        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><img src="images/settings.png" alt="settings" /></a></li>
       </ul>
 
       <div class="tab-content">
-        <div role="tabpanel" class="row tab-pane fade in active" id="content">
-          <h3 id="contentHead">Content</h3>
-          <p>Customize your copy</p>
+        <div role="tabpanel" class="row tab-pane in active fade" id="settings">
+          <h3>Settings</h3>
+          <form>
+            <div class="form-group">
+              <label>AWeber List ID</label>
+              <input class="form-control" id="aweberListIdInput" placeholder="List ID" />
+            </div>
+            <div class="form-group">
+              <label>Redirect URL</label>
+              <input class="form-control" id="aweberRedirectInput" placeholder="Redirect" type="url" />
+            </div>
+            <div class="form-group">
+              <label>Ad Tracking</label>
+              <input class="form-control" id="aweberAdTrackingInput" placeholder="Ad Tracking" type="url" />
+              <small>Add tags for easy subscriber tracking</small>
+            </div>
+          </form>
+
+          <div class="well" style="margin-top: 20px;">
+            <p>If you'd like to receive release notes and updates on the development process, please add this awlist to the form, build it, and then submit your email address.</p>
+            List ID: awlist4099564
+          </div>
+        </div>
+
+        <div role="tabpanel" class="row tab-pane fade" id="style">
+          <h3>Design</h3>
           <form>
             <div class="form-group">
               <label>Headline Text</label>
@@ -277,22 +299,7 @@
               <label for="theme">Footer:</label>
               <input type="checkbox" checked id="aweberFooterToggle" data-toggle="toggle">
             </div>
-            <div class="form-group">
-              <label>AWeber List ID</label>
-              <input class="form-control" id="aweberListIdInput" placeholder="List ID" />
-            </div>
-          </form>
 
-          <div class="well" style="margin-top: 20px;">
-            <p>If you'd like to receive release notes and updates on the development process, please add this awlist to the form, build it, and then submit your email address.</p>
-            List ID: awlist4099564
-          </div>
-        </div>
-
-        <div role="tabpanel" class="row tab-pane fade" id="style">
-          <h3>Design</h3>
-          <p>Add a splash of color</p>
-          <form>
             <div class="form-group">
               <label for="theme">Theme:</label>
               <select class="form-control" id="themePicker" name="theme">
@@ -361,22 +368,6 @@
               </div>
             </div>
             Feeling good about your theme? <a id="aweberShareForm">Share it!</a>
-          </form>
-        </div>
-
-        <div role="tabpanel" class="row tab-pane fade" id="settings">
-          <h3>Settings</h3>
-          <p>Set your advance options</p>
-          <form>
-            <div class="form-group">
-              <label>Redirect URL</label>
-              <input class="form-control" id="aweberRedirectInput" placeholder="Redirect" type="url" />
-            </div>
-            <div class="form-group">
-              <label>Ad Tracking</label>
-              <input class="form-control" id="aweberAdTrackingInput" placeholder="Ad Tracking" type="url" />
-              <small>Add tags for easy subscriber tracking</small>
-            </div>
           </form>
         </div>
 

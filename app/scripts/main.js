@@ -311,7 +311,7 @@ function aweberFormCheck(input, theDefault) {
       // Error when AWlist ID not filled
       $('#aweberListIdInput').parent().addClass('has-error');
       $('.tab-pane').removeClass('active');
-      $('#content').addClass('in active');
+      $('#settings').addClass('in active');
     }
   });
 
