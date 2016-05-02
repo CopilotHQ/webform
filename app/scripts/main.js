@@ -85,6 +85,16 @@ $(document).ready(function(){
       }
     });
 
+  // Init font picker
+  $('#fontPicker').on('change', function() {
+    if ($(this).find(':selected').data('font') == "sans-serif") {
+      $('.aweberHForm').css('font-family', this.value + ', arial, sans-serif');
+    } else {
+      $('.aweberHForm').css('font-family', this.value + ', serif');
+    }
+    initTheme();
+  });
+
   // Init theme picker
     $('#themePicker').selectpicker();
 
