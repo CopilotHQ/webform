@@ -87,13 +87,28 @@ $(document).ready(function(){
 
   // Init font picker
   $('#fontPicker').on('change', function() {
-    if ($(this).find(':selected').data('font') == "sans-serif") {
+    var fontFamily = $(this).find(':selected').data('font'),
+        gf = $(this).find(':selected').data('gf');
+
+    if (fontFamily == "sans-serif") {
       $('.aweberHForm').css('font-family', this.value + ', arial, sans-serif');
     } else {
       $('.aweberHForm').css('font-family', this.value + ', serif');
     }
+    googleFont(gf)
     initTheme();
   });
+
+  // Include google font link when needed
+  function googleFont(isGF){
+    if(isGF == false) {
+      $('#aweber-gf').remove();
+    } else {
+      $('#aweberFormToSnippet').prepend('<link href="https://fonts.googleapis.com/css?family=' + isGF + '" rel="stylesheet" type="text/css" id="aweber-gf">');
+    }
+  }
+
+  //<link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet" type="text/css">
 
   // Init theme picker
     $('#themePicker').selectpicker();
