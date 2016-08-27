@@ -16,8 +16,6 @@
 *** What should your headline say (with helper placeholder text)
 *** What should your button say (with helper placeholder text)
 * Add helper line 'The list ID you entered is LISTID - make sure that's correct before you add to your site.'
-* Style Tab
-** Hide advance option until toggle is switched
 * On builder gives preview of how it will look on site.
 * Set form colors based on website
 * Add ability to set "submit" button to wiggle or shine
@@ -26,7 +24,18 @@
 
 $(document).ready(function(){
   // Keep example form at the top of page on scroll
-    $('#aweberFormToSnippet').scrollToFixed();
+  // $('#aweberFormToSnippet').scrollToFixed();
+
+  // Create initial theme
+  $.get('../templates/styles/vendor/flexboxgrid.min.css', function(data) {
+    $('#formCSS').append(data);
+  });
+  $.get('../templates/styles/horizontal.css', function(data) {
+    $('#formCSS').append(data);
+  });
+  $.get('../templates/layouts/horizontal.html', function(data) {
+    $('#aweberFormToSnippet').append(data);
+  });
 
   $("#advancedStyleOptions :input").prop("disabled", true);
   $('#advancedStyleOptions label').addClass('text-muted');
@@ -332,11 +341,15 @@ function aweberFormCheck(input, theDefault) {
       $('#codeSnippet').modal('show');
 
       $('#aweberListIdInput').parent().removeClass('has-error');
+
+      ga('send', 'event', 'Button', 'Build', 'Built');
     } else {
       // Error when AWlist ID not filled
       $('#aweberListIdInput').parent().addClass('has-error');
       $('.tab-pane').removeClass('in active');
       $('#settings').addClass('in active');
+
+      ga('send', 'event', 'Button', 'Build', 'Fail');
     }
   });
 

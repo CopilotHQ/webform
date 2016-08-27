@@ -8,6 +8,11 @@
 
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <meta property="og:title" content="Horizontal Webform Builder" />
+    <meta property="og:url" content="http://aweber.design/webforms/beta" />
+    <meta property="og:image" content="http://aweber.design/webforms/beta/images/webforms.jpg" />
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css(.) styles/vendor.css -->
@@ -42,198 +47,11 @@
 
     <div class="col-md-9 preview">
 
-        <div id="aweberFormToSnippet">
-          <style>
-            .aweberHForm {
-              font-family: 'helvetica', arial, sans-serif;
-              font-size: 12px;
-              color: #333333;
+      <div id="aweberFormToSnippet">
 
-              background: #EEEEEE;
+        <style id="formCSS"></style>
 
-              margin-top: 20px;
-              padding: 15px;
-
-              -webkit-box-sizing: border-box;
-              -moz-box-sizing: border-box;
-              box-sizing: border-box;
-            }
-
-            .aweberHForm * {
-              -webkit-box-sizing: border-box;
-              -moz-box-sizing: border-box;
-              box-sizing: border-box;
-
-              box-shadow: none;
-              margin: 0;
-            	padding: 0;
-            	border: 0;
-            	outline: 0;
-            	font-weight: inherit;
-            	font-style: inherit;
-            	font-size: 100%;
-            	font-family: inherit;
-            	vertical-align: baseline;
-            }
-
-            .aweberHForm h2 {
-              margin: 0 0 12px;
-              padding: 0;
-
-              font-size: 24px;
-            }
-
-            .aweberHForm p {
-              margin: 15px 0 0;
-            }
-
-            [class*='aweberHFormCol-'] {
-              float: left;
-              min-height: 1px;
-              padding-right: 10px;
-            }
-
-            [class*='aweberHFormCol-']:last-child {
-              padding-right: 0;
-            }
-
-            .aweberHForm input {
-              font-size: 14px;
-
-              margin: 0;
-              border: 0;
-
-              box-shadow: none;
-              -webkit-box-shadow: none;
-              -moz-box-shadow: none;
-            }
-
-            .aweberHForm input[type="submit"] {
-              background-position: center !important;
-              width: 100%;
-              padding: 10px;
-
-              background: #AAAAAA;
-              color: #FFFFFF;
-
-              border-radius: 3px;
-              -webkit-border-radius: 3px;
-              -moz-border-radius: 3px;
-            }
-
-            .aweberHForm input[type="email"], .aweberHForm input[type="text"] {
-              background-position: center !important;
-              border: none;
-              padding: 10px;
-            }
-
-            .aweberHFormGrid {
-              width: 100%;
-              margin: 0 auto;
-            }
-
-            .aweberHFormGrid:after {
-              content: "";
-              display: table;
-              clear: both;
-            }
-            .aweberHFormCol-1-1 {
-              width: 100%;
-            }
-            .aweberHFormCol-1-2 {
-              width: 50%;
-            }
-            .aweberHFormCol-1-3 {
-              width: 33%;
-            }
-            .aweberHFormCol-2-5 {
-              width: 40%;
-            }
-            .aweberHFormCol-1-5 {
-              width: 20%;
-              position: relative;
-            }
-            .af-textWrap input {
-              width: 100% !important;
-            }
-
-            #aweberHFormFooter {
-              text-align: center;
-              margin-top: 10px;
-              font-size: 12px;
-            }
-
-            .aweberHForm-pulse {
-              animation: pulse 1.3s ease infinite;
-              backface-visibility: hidden;
-            }
-
-            @keyframes pulse {
-              0% { transform: perspective(1px) scale(1,1); }
-              50% { transform: perspective(1px) scale(1.02,1.02); }
-              100% { transform: perspective(1px) scale(1,1); }
-            }
-
-            @media (max-width: 600px) {
-              [class*='aweberHFormCol-'] {
-                padding: 0;
-                width: 100%;
-              }
-              .aweberHForm input[type="text"], .aweberHForm input[type="email"] {
-                margin-bottom: 10px;
-              }
-            }
-          </style>
-          <form method="post" class="af-form-wrapper" accept-charset="UTF-8" action="https://www.aweber.com/scripts/addlead.pl"  >
-            <div style="display: none;">
-              <input type="hidden" name="meta_web_form_id" value="" />
-              <input type="hidden" name="meta_split_id" value="" />
-              <input id="aweberListId" type="hidden" name="listname" value="" />
-              <input id="aweberRedirect" type="hidden" name="redirect" value="https://www.aweber.com/thankyou.htm?m=default" id="redirect_20ad9205a668ef2753dfbc3e2fd3cf8a" />
-              <input id="aweberAdTracking" type="hidden" name="meta_adtracking" value="My_Web_Form" />
-              <input type="hidden" name="meta_message" value="1" />
-              <input type="hidden" name="meta_required" value="name,email" />
-              <input type="hidden" name="meta_tooltip" value="" />
-            </div>
-            <div class="af-form aweberHForm">
-              <div class="aweberHFormGrid" id="aweberHeadlineTextValue">
-                <div class="aweberHFormCol-1-1">
-                  <h2 align="center" style="display: none;"></h2>
-                </div>
-              </div>
-
-              <div class="aweberHFormGrid">
-                <div class="aweberHFormCol-2-5">
-                  <div class="af-textWrap">
-                    <input id="awf_field-78323082" type="text" placeholder="Name" name="name" class="text" value=""  onfocus=" if (this.value == '') { this.value = ''; }" onblur="if (this.value == '') { this.value='';} " tabindex="500" />
-                  </div>
-                  <div class="af-clear"></div>
-                </div>
-                <div class="aweberHFormCol-2-5">
-                  <div class="af-textWrap">
-                    <input class="text" id="awf_field-78323083" type="email" placeholder="Email Address" name="email" value="" tabindex="501" onfocus=" if (this.value == '') { this.value = ''; }" onblur="if (this.value == '') { this.value='';} " />
-                  </div>
-                  <div class="af-clear"></div>
-                </div>
-                <div class="aweberHFormCol-1-5">
-                  <input  name="submit" class="submit" type="submit" value="Submit" id="submitButton" tabindex="502" />
-                  <div class="af-clear"></div>
-                </div>
-              </div>
-
-              <div class="aweberHFormGrid">
-                <div class="aweberHForm-1-1" id="aweberHFormFooter">
-                  <p>We respect your <a title="Privacy Policy" class="aweberFooterLink" href="https://www.aweber.com/permission.htm" target="_blank" rel="nofollow">email privacy</a> | <a href="https://www.aweber.com" title="AWeber Email Marketing" target="_blank" class="aweberFooterLink" rel="nofollow">Powered by AWeber Email Marketing</a></p>
-                  <div class="af-clear"></div>
-                </div>
-              </div>
-
-            </div>
-            <div style="display: none;">
-              <img src="https://forms.aweber.com/form/displays.htm?id=jMxMzCxsbEzMzA==" alt="" />
-            </div>
-          </form>
-        </div>
+      </div>
 
     </div>
 
@@ -254,7 +72,7 @@
               <input class="form-control" id="aweberListIdInput" placeholder="List ID" />
             </div>
             <div class="form-group">
-              <label>Redirect URL</label>
+              <label>Redirect URL (<em>make sure to start with <code>http://</code> or <code>https://</code></em>)</label>
               <input class="form-control" id="aweberRedirectInput" placeholder="Redirect" type="url" />
             </div>
             <div class="form-group">
@@ -457,12 +275,13 @@
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-69341181-3', 'auto');
+      ga('send', 'pageview');
     </script>
   </body>
 </html>
