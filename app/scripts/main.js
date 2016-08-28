@@ -48,9 +48,9 @@ $(document).ready(function(){
 
   //Update text values
     // Update Headline Text
-      textUpdate('#aweberHeadlineTextValueInput', '#aweberHeadlineTextValue h2');
+      textUpdate('#aweberHeadlineTextValueInput', '#aweberHeadlineTextValue');
     // Update Subheader Text
-      textUpdate('#aweberSubheaderTextValueInput', '#aweberHeadlineTextValue p');
+      textUpdate('#aweberSubheaderTextValueInput', '#aweberSubheaderTextValue');
     // Submit button text value
       valUpdate('#aweberButtonTextValueInput', '#submitButton');
 
@@ -385,6 +385,9 @@ function loadTemplate(css, html) {
   $('.breadcrumb').show();
   $('#formCSS').empty();
   $('#formHTML').empty();
+  $('#preview').removeClass('col-md-12').addClass('col-md-9');
+  $('#customize').removeClass('hidden').addClass('col-md-3');
+
   $.get('styles/templates/grid.css', function(data) {
     $('#formCSS').append(data);
   });
