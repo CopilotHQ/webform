@@ -1,0 +1,101 @@
+.awbr-grid {
+  font-family: 'helvetica', arial, sans-serif;
+  font-size: 12px;
+  color: #333333;
+
+  background: #EEEEEE;
+
+  padding: 10px 5px;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  * {
+    border: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin: 0 0 5px;
+    padding: 0;
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 5px;
+    white-space: pre-wrap
+  }
+
+  input {
+    border: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    font-size: 14px;
+    margin: 0;
+
+    &[type="submit"] {
+      background-position: center !important;
+      width: 100%;
+      padding: 10px;
+
+      background: #AAAAAA;
+      color: #FFFFFF;
+
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+    }
+
+    &[type="email"],
+    &[type="text"] {
+      background-position: center !important;
+      border: none;
+      margin-bottom: 10px;
+      padding: 10px;
+      width: 100%;
+    }
+  }
+
+  #awbr-footer {
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .awbr-pulse {
+    animation: pulse 1.3s ease infinite;
+    backface-visibility: hidden;
+  }
+}
+
+@keyframes pulse {
+  0% { transform: perspective(1px) scale(1,1); }
+  50% { transform: perspective(1px) scale(1.02,1.02); }
+  100% { transform: perspective(1px) scale(1,1); }
+}
+
+@media (max-width: 600px) {
+  [class*='aweberHFormCol-'] {
+    padding: 0;
+    width: 100%;
+  }
+
+  input {
+    &[type="submit"] {
+      white-space: normal;
+    }
+  }
+}

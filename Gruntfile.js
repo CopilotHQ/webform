@@ -168,7 +168,7 @@ module.exports = function (grunt) {
     sass: {
       options: {
         sourceMap: true,
-        sourceMapEmbed: true,
+        sourceMapEmbed: false,
         sourceMapContents: true,
         includePaths: ['.']
       },
@@ -176,7 +176,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= config.app %>/styles',
-          src: ['*.{scss,sass}'],
+          src: ['**/*.{scss,sass}'],
           dest: '.tmp/styles',
           ext: '.css'
         }]

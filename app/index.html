@@ -37,7 +37,7 @@
 
     <nav class="copilot">
       <div class="contain-nav">
-        <img class="copilot-logo" src="images/copilot-logo.png">
+        <a href="/"><img class="copilot-logo" src="images/copilot-logo.png"></a>
         <span><a href="https://www.aweber.com" style="text-decoration:none; color:#505E67 ; font-weight:400;">Powered by AWeber</a></span>
       </div>
     </nav>
@@ -46,10 +46,15 @@
   <div class="row" style="height: 100%;">
 
     <div class="col-md-9 preview">
+      <div class="breadcrumb" style="display: none;">
+        <a href="/">start over</a>
+      </div>
 
       <div id="aweberFormToSnippet">
 
         <style id="formCSS"></style>
+
+        <div id="formHTML"></div>
 
       </div>
 
@@ -93,7 +98,11 @@
           <form>
             <div class="form-group">
               <label>Headline Text</label>
-              <input class="form-control" id="aweberHeadlineTextValueInput" placeholder="Headline Text (optional)" value="" type="url" />
+              <input class="form-control" id="aweberHeadlineTextValueInput" placeholder="Headline Text (optional)" value="" type="text" />
+            </div>
+            <div class="form-group">
+              <label>Subheader Text</label>
+              <textarea class="form-control" id="aweberSubheaderTextValueInput" placeholder="Subheader text (optional)" value=""></textarea>
             </div>
             <div class="form-group">
               <label>Button Title Text</label>

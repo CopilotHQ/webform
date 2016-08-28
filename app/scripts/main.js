@@ -26,15 +26,9 @@ $(document).ready(function(){
   // Keep example form at the top of page on scroll
   // $('#aweberFormToSnippet').scrollToFixed();
 
-  // Create initial theme
-  $.get('../templates/styles/vendor/flexboxgrid.min.css', function(data) {
-    $('#formCSS').append(data);
-  });
-  $.get('../templates/styles/horizontal.css', function(data) {
-    $('#formCSS').append(data);
-  });
-  $.get('../templates/layouts/horizontal.html', function(data) {
-    $('#aweberFormToSnippet').append(data);
+  // Load initial view
+  $.get('../templates/main.html', function(data) {
+    $('#formHTML').append(data);
   });
 
   $("#advancedStyleOptions :input").prop("disabled", true);
@@ -55,26 +49,28 @@ $(document).ready(function(){
   //Update text values
     // Update Headline Text
       textUpdate('#aweberHeadlineTextValueInput', '#aweberHeadlineTextValue h2');
+    // Update Subheader Text
+      textUpdate('#aweberSubheaderTextValueInput', '#aweberHeadlineTextValue p');
     // Submit button text value
       valUpdate('#aweberButtonTextValueInput', '#submitButton');
 
   //Update text colors
     // Form text color
-      colorUpdate('#aweberTextColorPicker', '.aweberHForm', 'color');
+      colorUpdate('#aweberTextColorPicker', '.awbr-grid', 'color');
       colorUpdate('#aweberButtonBackgroundColorPicker', '.aweberFooterLink', 'color');
     // Button text color
-      colorUpdate('#aweberButtonTextColorPicker', '.aweberHForm input[type="submit"]', 'color');
+      colorUpdate('#aweberButtonTextColorPicker', '.awbr-grid input[type="submit"]', 'color');
 
   // Update backgrounds
     // Form background color
-      colorUpdate('#aweberBackgroundColorPicker', '.aweberHForm', 'background-color');
-      bgImageUpdate('#aweberBackgroundImageInput', '.aweberHForm');
+      colorUpdate('#aweberBackgroundColorPicker', '.awbr-grid', 'background-color');
+      bgImageUpdate('#aweberBackgroundImageInput', '.awbr-grid');
     // Button background color
-      colorUpdate('#aweberButtonBackgroundColorPicker', '.aweberHForm input[type="submit"]', 'background-color');
-      bgImageUpdate('#aweberButtonBackgroundImageInput', '.aweberHForm input[type="submit"]');
+      colorUpdate('#aweberButtonBackgroundColorPicker', '.awbr-grid input[type="submit"]', 'background-color');
+      bgImageUpdate('#aweberButtonBackgroundImageInput', '.awbr-grid input[type="submit"]');
     // Form input background color
-      colorUpdate('#aweberInputBackgroundColorPicker', '.aweberHForm input[type="email"] , .aweberHForm input[type="text"]', 'background-color');
-      bgImageUpdate('#aweberInputBackgroundImageInput', '.aweberHForm input[type="email"] , .aweberHForm input[type="text"]');
+      colorUpdate('#aweberInputBackgroundColorPicker', '.awbr-grid input[type="email"] , .awbr-grid input[type="text"]', 'background-color');
+      bgImageUpdate('#aweberInputBackgroundImageInput', '.awbr-grid input[type="email"] , .awbr-grid input[type="text"]');
 
   // Footer Toggle
     $('#aweberFooterToggle').change(function() {
@@ -88,9 +84,9 @@ $(document).ready(function(){
   // Animated Button Toggle
     $('#aweberAnimatedButtonToggle').change(function() {
       if($(this).is(':checked')) {
-        $('.aweberHForm input[type="submit"]').addClass('aweberHForm-pulse');
+        $('.awbr-grid input[type="submit"]').addClass('awbr-pulse');
       } else {
-        $('.aweberHForm input[type="submit"]').removeClass('aweberHForm-pulse');
+        $('.awbr-grid input[type="submit"]').removeClass('awbr-pulse');
       }
     });
 
@@ -100,9 +96,9 @@ $(document).ready(function(){
         gf = $(this).find(':selected').data('gf');
 
     if (fontFamily == "sans-serif") {
-      $('.aweberHForm').css('font-family', this.value + ', arial, sans-serif');
+      $('.awbr-grid').css('font-family', this.value + ', arial, sans-serif');
     } else {
-      $('.aweberHForm').css('font-family', this.value + ', serif');
+      $('.awbr-grid').css('font-family', this.value + ', serif');
     }
     googleFont(gf)
     initTheme();
@@ -228,7 +224,7 @@ function setTheme(formBackgroundColor, formBackgroundImage, formTextColor, input
   $('#aweberTextColorPicker input').val(formTextColor).change();
   $('#aweberInputBackgroundColorPicker input').val(inputBackgroundColor).change();
   $('#aweberInputBackgroundImageInput').val(inputBackgroundImage).change();
-  $('.aweberHForm input[type="email"] , .aweberHForm input[type="text"]').css('color', inputTextColor);
+  $('.awbr-grid input[type="email"] , .awbr-grid input[type="text"]').css('color', inputTextColor);
   $('#aweberButtonBackgroundColorPicker input').val(buttonBackgroundColor).change();
   $('#aweberButtonBackgroundImageInput').val(buttonBackgroundImage).change();
   $('#aweberButtonTextColorPicker input').val(buttonTextColor).change();
@@ -261,7 +257,7 @@ function initTheme() {
     $('#aweberInputBackgroundImageInput').val(urlInputBackgroundImage).change();
   }
   if(urlInputTextColor !== undefined) {
-    $('.aweberHForm input[type="email"] , .aweberHForm input[type="text"]').css('color', '#' + urlInputTextColor);
+    $('.awbr-grid input[type="email"] , .awbr-grid input[type="text"]').css('color', '#' + urlInputTextColor);
   }
   if(urlButtonBackgroundColor !== undefined) {
     $('#aweberButtonBackgroundColorPicker input').val('#' + urlButtonBackgroundColor).change();
@@ -298,10 +294,10 @@ function aweberFormCheck(input, theDefault) {
   $('#aweberHeadlineTextValueInput').bind('keyup change', function(e) {
     if($('#aweberHeadlineTextValueInput').val() != '') {
       $('#aweberHeadlineTextValue').show();
-      $('.aweberHFormCol-2-5').addClass('aweberHForm-headline-inputs');
+      $('.awbr-gridCol-2-5').addClass('aweberHForm-headline-inputs');
     } else {
       $('#aweberHeadlineTextValue').hide();
-      $('.aweberHFormCol-2-5').removeClass('aweberHForm-headline-inputs');
+      $('.awbr-gridCol-2-5').removeClass('aweberHForm-headline-inputs');
     }
   });
 
@@ -383,3 +379,19 @@ function aweberFormCheck(input, theDefault) {
 
     $('.shareURL').html('http://aweber.design/webforms/?formBackgroundColor=' + formBG + '&formBackgroundImage=' + formBGImg + '&inputBackgroundColor=' + inputBG + '&inputBackgroundImage='+ inputBGImg + '&buttonBackgroundColor=' + buttonBG + '&buttonBackgroundImage=' + buttonBGImg + '&formTextColor=' + formText + '&inputTextColor=ffff00&buttonTextColor=' + buttonText)
   });
+
+
+function loadTemplate(css, html) {
+  $('.breadcrumb').show();
+  $('#formCSS').empty();
+  $('#formHTML').empty();
+  $.get('styles/templates/grid.css', function(data) {
+    $('#formCSS').append(data);
+  });
+  $.get('styles/templates/' + css + '.css', function(data) {
+    $('#formCSS').append(data);
+  });
+  $.get('../templates/' + html + '.html', function(data) {
+    $('#formHTML').append(data);
+  });
+}

@@ -1,0 +1,43 @@
+$gutter:    5px;
+
+.awbr-grid {
+
+  .awbr-row {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 $gutter;
+    width: 100%;
+
+    *[class^="awbr-c-"] {
+      box-sizing: border-box;
+      padding: $gutter;
+    }
+
+    *[class*="-1"] { flex: 1; }
+    *[class*="-2"] { flex: 2; }
+    *[class*="-3"] { flex: 3; }
+    *[class*="-4"] { flex: 4; }
+    *[class*="-5"] { flex: 5; }
+    *[class*="-6"] { flex: 6; }
+    *[class*="-7"] { flex: 7; }
+    *[class*="-8"] { flex: 8; }
+    *[class*="-9"] { flex: 9; }
+    *[class*="-10"] { flex: 10; }
+    *[class*="-11"] { flex: 11; }
+    *[class*="-12"] { flex: 12; }
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .awbr-grid {
+
+    .awbr-row {
+
+      *[class^="awbr-c-"] {
+        min-width: 100%;
+      }
+    }
+  }
+}
