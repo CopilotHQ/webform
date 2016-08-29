@@ -27,7 +27,7 @@ $(document).ready(function(){
   // $('#aweberFormToSnippet').scrollToFixed();
 
   // Load initial view
-  $.get('../templates/main.html', function(data) {
+  $.get('templates/main.html', function(data) {
     $('#formHTML').append(data);
   });
 
@@ -394,7 +394,7 @@ function loadTemplate(css, html) {
   $.get('styles/templates/' + css + '.css', function(data) {
     $('#formCSS').append(data);
   });
-  $.get('../templates/' + html + '.html', function(data) {
+  $.get('templates/' + html + '.html', function(data) {
     $('#formHTML').append(data);
   });
 }

@@ -221,7 +221,7 @@ module.exports = function (grunt) {
       dist: {
         src: [
           '<%= config.dist %>/scripts/{,*/}*.js',
-          '<%= config.dist %>/styles/{,*/}*.css',
+          '<%= config.dist %>/styles/*.css',
           '<%= config.dist %>/images/{,*/}*.*',
           '<%= config.dist %>/styles/fonts/{,*/}*.*',
           '<%= config.dist %>/*.{ico,png}'
@@ -245,7 +245,7 @@ module.exports = function (grunt) {
         assetsDirs: [
           '<%= config.dist %>',
           '<%= config.dist %>/images',
-          '<%= config.dist %>/styles'
+          '<%= config.dist %>/styles',
         ]
       },
       html: ['<%= config.dist %>/{,*/}*.html'],
@@ -311,6 +311,20 @@ module.exports = function (grunt) {
     //     }
     //   }
     // },
+
+    cssmin: {
+      dist: {
+        files: [
+          {
+            expand: true,
+            cwd: '.tmp/styles',
+            src: '**/*.css',
+            dest: '<%= config.dist %>/styles'
+          }
+        ]
+      }
+    },
+
     // uglify: {
     //   dist: {
     //     files: {

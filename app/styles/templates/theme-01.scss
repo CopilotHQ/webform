@@ -52,6 +52,7 @@
       width: 100%;
       padding: 10px;
       margin-bottom: 10px;
+      white-space: normal;
 
       background: #AAAAAA;
       color: #FFFFFF;
@@ -92,11 +93,5 @@
   [class*='aweberHFormCol-'] {
     padding: 0;
     width: 100%;
-  }
-
-  input {
-    &[type="submit"] {
-      white-space: normal;
-    }
   }
 }
