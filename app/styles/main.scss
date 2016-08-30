@@ -55,11 +55,11 @@ h2 {
 
 .customize {
   position: relative;
-  background: #FAFAFA;
+  @extend .bg-lightGray;
   height: 100%;
   overflow: scroll;
   padding-bottom: 36px;
-  border-left: 1px solid #DDDDDD;
+  border-left: 1px solid $midGray;
   h3 {
     color: #0079C1;
     margin-bottom: 24px;
@@ -67,7 +67,7 @@ h2 {
   @media (max-width: $screen-md-min) {
     margin-top: 20px;
     border-left: 0;
-    border-top: 1px solid #DDDDDD;
+    border-top: 1px solid $midGray;
     height: auto;
   }
 }
@@ -93,7 +93,7 @@ ul.nav-pills {
   }
   a {
     border-radius:40px;
-    background: #CCCCCC;
+    background: $midGray;
     padding: 12px;
     &:hover {
       background: #AAAAAA;
