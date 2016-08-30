@@ -1,8 +1,32 @@
-<h1 class="text-center">Choose a template to start</h1>
+<h1 class="text-center">Select the form layout you’d like to use:</h1>
 
-<div class="templates">
-  <a onclick="loadTemplate('theme-01', 'vertical');"><img src="images/templates/vertical.png" alt="Vertical" /></a>
-  <a onclick="loadTemplate('theme-01', 'horizontal');"><img src="images/templates/horizontal.png" alt="Horizontal" /></a>
-  <a onclick="loadTemplate('theme-01', 'split-01');"><img src="images/templates/split-01.png" alt="Split Form One" /></a>
-  <!-- <a onclick="loadTemplate('theme-01', 'split1-02);"><img src="images/templates/split-02.png" alt="Split Form Two" /></a> -->
+<div class="row templates">
+
+  <div class="col-sm-4">
+    <div class="templates__card text-center">
+      <img src="images/templates/Vertical.png" alt="Vertical" class="img-responsive" />
+      <h2>Vertical Form</h2>
+      <p>Perfect if you need a sign up form for a side bar or other tight spot.</p>
+      <a onclick="loadTemplate('theme-01', 'vertical');" class="btn btn-primary btn-block">Use this layout</a>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="templates__card text-center">
+      <img src="images/templates/Horizontal.png" alt="Horizontal" class="img-responsive" />
+      <h2>Horizontal Form</h2>
+      <p>This is great for when you want a form in your header or footer.</p>
+      <a onclick="loadTemplate('theme-01', 'horizontal');" class="btn btn-primary btn-block">Use this layout</a>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="templates__card text-center">
+      <img src="images/templates/Split-01.png" alt="Split" class="img-responsive" />
+      <h2>Split Form</h2>
+      <p>Split forms are a fancy way of adding a sign up form with some real presence.</p>
+      <a onclick="loadTemplate('theme-01', 'split-01');" class="btn btn-primary btn-block">Use this layout</a>
+    </div>
+  </div>
+
 </div>

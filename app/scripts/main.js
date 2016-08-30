@@ -383,6 +383,7 @@ function aweberFormCheck(input, theDefault) {
 
 function loadTemplate(css, html) {
   $('.breadcrumb').show();
+  $('body').removeClass('bg-lightGray');
   $('#formCSS').empty();
   $('#formHTML').empty();
   $('#preview').removeClass('col-md-12').addClass('col-md-9');
