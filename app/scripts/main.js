@@ -386,8 +386,8 @@ function loadTemplate(css, html) {
   $('body').removeClass('bg-lightGray');
   $('#formCSS').empty();
   $('#formHTML').empty();
-  $('#preview').removeClass('col-md-12').addClass('col-md-9 col-md-pull-3');
-  $('#customize').removeClass('hidden').addClass('col-md-3 col-md-push-3');
+  $('#preview').removeClass('col-md-12').addClass('col-md-9 col-md-push-3');
+  $('#customize').removeClass('hidden').addClass('col-md-3 col-md-pull-9');
 
   $.get('styles/templates/grid.css', function(data) {
     $('#formCSS').append(data);
