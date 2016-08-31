@@ -75,9 +75,9 @@ $(document).ready(function(){
   // Footer Toggle
     $('#aweberFooterToggle').change(function() {
       if($(this).is(':checked')) {
-        $('#aweberHFormFooter').show();
+        $('#awbr-footer').show();
       } else {
-        $('#aweberHFormFooter').hide();
+        $('#awbr-footer').hide();
       }
     });
 

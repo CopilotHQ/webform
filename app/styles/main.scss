@@ -21,13 +21,12 @@ body {
 
 h1 {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 400;
   margin: 50px;
 }
 
 h2 {
   font-size: 18px;
-  font-weight: 600;
   font-weight: bold
 }
 
@@ -59,11 +58,7 @@ h2 {
   height: 100%;
   overflow: scroll;
   padding-bottom: 36px;
-  border-left: 1px solid $midGray;
-  h3 {
-    color: #0079C1;
-    margin-bottom: 24px;
-  }
+  border-right: 1px solid $midGray;
   @media (max-width: $screen-md-min) {
     margin-top: 20px;
     border-left: 0;
@@ -160,6 +155,26 @@ ul.nav-pills {
         &:hover {
           background: darken($coBlue, 10%);
         }
+      }
+    }
+  }
+
+
+// Fields
+  .customize {
+    .form-group {
+      label {
+        font-weight: normal;
+      }
+
+      input[type="text"],
+      input[type="url"],
+      .form-control,
+      textarea {
+        border-radius: 0;
+        border: 1px solid darken($lightGray, 10%);
+        // border: none;
+        box-shadow: $midGray 0px 1px 2px;
       }
     }
   }
