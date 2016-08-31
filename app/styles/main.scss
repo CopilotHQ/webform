@@ -23,6 +23,9 @@ h1 {
   font-size: 24px;
   font-weight: 400;
   margin: 50px;
+  @media (max-width: $screen-md-min) {
+    margin: 30px 40px;
+  }
 }
 
 h2 {
@@ -52,6 +55,11 @@ h2 {
   padding: 12px 24px;
 }
 
+.customize,
+.preview {
+  padding-top: 62px;
+}
+
 .customize {
   position: relative;
   @extend .bg-lightGray;
@@ -60,6 +68,7 @@ h2 {
   padding-bottom: 36px;
   border-right: 1px solid $midGray;
   @media (max-width: $screen-md-min) {
+    padding-top: 0;
     margin-top: 20px;
     border-left: 0;
     border-top: 1px solid $midGray;
@@ -71,6 +80,7 @@ h2 {
   position: relative;
   height: 100%;
   @media (max-width: $screen-md-min) {
+    padding-top: 62px;
     height: auto;
   }
 }
@@ -134,6 +144,8 @@ ul.nav-pills {
       background: white;
       border-radius: 6px;
       box-sizing: border-box;
+      border: 1px solid darken($lightGray, 10%);
+      box-shadow: $midGray 0px 1px 2px;
 
       p {
         padding: 5px 16px 10px;
@@ -173,7 +185,6 @@ ul.nav-pills {
       textarea {
         border-radius: 0;
         border: 1px solid darken($lightGray, 10%);
-        // border: none;
         box-shadow: $midGray 0px 1px 2px;
       }
     }
