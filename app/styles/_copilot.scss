@@ -1,6 +1,11 @@
 nav {
+  z-index: 200;
+  position: fixed;
+  width: 100%;
   &.copilot {
     background: $coBlue;
+    border-bottom: 1px solid darken($coBlue, 15%);
+    box-shadow: $midGray 0px 1px 2px;
     font-size: 18px;
     font-weight: 400;
 
