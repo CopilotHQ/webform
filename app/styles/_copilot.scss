@@ -1,13 +1,29 @@
 nav {
   &.copilot {
     background: $coBlue;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 400;
+
+    img {
+      margin-right: 6px;
+    }
 
     a {
       color: white;
       text-decoration: none;
       padding: 10px 16px;
       display: inline-block;
+    }
+
+    span {
+      position: relative;
+      top: 3px;
+      display: inline-block;
+    }
+
+    .pull-right {
+      font-size: 14px;
+      padding-top: 16px;
     }
   }
 }
